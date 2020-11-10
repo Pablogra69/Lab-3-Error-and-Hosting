@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/CovidHost" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CovidHost" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57692/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="PersonCase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityCase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CityConcact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateConcact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateResults" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateTest" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="PersonCase" nillable="true" type="tns:PersonCase" />
+  <xs:complexType name="ArrayOfPersonCase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PersonCase" nillable="true" type="tns:PersonCase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPersonCase" nillable="true" type="tns:ArrayOfPersonCase" />
+</xs:schema>

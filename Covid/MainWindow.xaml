@@ -1,0 +1,22 @@
+﻿<Window x:Class="Covid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Covid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Button x:Name="Button_Case" Content="Dodaj przypadek" HorizontalAlignment="Stretch" Margin="10,10,10,10" Grid.Row="0"  VerticalAlignment="Stretch" Click="Button_Case_Click" />
+        <Button x:Name="Button_Contact" Content="Dodaj kontakt" HorizontalAlignment="Stretch" Margin="10,10,10,10" Grid.Row="1" VerticalAlignment="Stretch" Click="Button_Contact_Click" />
+        <Button x:Name="Button_List" Content="Pobierz liste osób wprowadzonych z danymi" HorizontalAlignment="Stretch" Margin="10,10,10,10"  Grid.Row="2" VerticalAlignment="Stretch" Click="Button_List_Click" />
+        <Button x:Name="Button_Finish"  Content="Zakończ wprowadzanie" HorizontalAlignment="Stretch"  Grid.Row="3" Margin="10,10,10,10" VerticalAlignment="Stretch" Click="Button_Finish_Click" />
+    </Grid>
+</Window>
